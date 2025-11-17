@@ -6,6 +6,31 @@ botaoAdicionar.addEventListener("click", function(){
 //Extrai informações do Paciente do form
     obtemPacienteDoFormulario(form);
 
+var tabela = document.querySelector("#tabela-pacientes");
+
+    tabela.appendChild(pacienteTr);
+
+});
+
+// dividir em três funções para trabalhar com tarefas mwnores
+function obtemPacienteDoFormulario(form){
+    var paciente = {
+       
+    nomeTd.textContent = paciente.nome;
+    pesoTd.textContent = paciente.peso;
+    alturaTd.textContent = paciente.altura;
+    gorduraTd.textContent = paciente.gordura;
+    imcTd.testcontent = paciente.IMC;
+    }
+
+    return paciente;
+   
+}
+//cria a tr e a td do paciente
+var paciente = montair(paciente);
+
+function montair(paciente){
+
     var pacienteTr = document.createElement("tr");
     var nomeTd = document.createElement("td");
     var pesoTd = document.createElement("td");
@@ -24,22 +49,4 @@ botaoAdicionar.addEventListener("click", function(){
     pacienteTr.appendChild(alturaTd);
     pacienteTr.appendChild(gorduraTd);
   pacienteTr.appendChild(IMCTd);
-
-    var tabela = document.querySelector("#tabela-pacientes");
-
-    tabela.appendChild(pacienteTr);
-
-});
-
-// dividir em três funções para trabalhar com tarefas mwnores
-function obtemPacienteDoFormulario(form){
-    var paciente = {
-        nome:
-        peso:
-        altura:
-        gordura:
-    }
-
-    return paciente;
-   
 }
